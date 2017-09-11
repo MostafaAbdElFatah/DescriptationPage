@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.mostafaabdel_fatah.descriptationpage.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--  the start of image  and share frame layoit  -->
+            <FrameLayout
+                android:id="@+id/framelayout"
+                android:layout_width="match_parent"
+                android:layout_height="278dp"
+                android:visibility="visible"
+                android:background="@drawable/framebg"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_gravity="center"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:srcCompat="@drawable/image" />
+
+                <ImageView
+                    android:id="@+id/ShareImage"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:onClick="ShareImageClicked"
+                    android:background="@drawable/ic_share_black_24dp" />
+
+
+            </FrameLayout>
+            <!--  the end of image  and share frame layout  -->
+            <!--  the start of rating and price Linear layout  -->
+            <LinearLayout
+                android:id="@+id/ratingpricelinearlayout"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/framelayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <RatingBar
+                    android:id="@+id/ratingbar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:numStars="10"
+                    android:rating="5"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="30dp"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="$ 250"/>
+            </LinearLayout>
+            <!--  the end of rating   and prince frame layout  -->
+            <!--  the Start of name of Delivery and descripation linear layout  -->
+            <LinearLayout
+                android:id="@+id/resnamelinearlayout"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingpricelinearlayout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="30dp"
+                    android:text="AL Hamd Delivery"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AL Hamd Delivery The Fast Delivery  in Egypt"/>
+            </LinearLayout>
+            <!--  the end of name of Delivery and descripation linear layout  -->
+            <!--  the Start of Color linear layout  -->
+            <LinearLayout
+                android:id="@+id/colorlinearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/resnamelinearlayout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Color"
+                    android:textSize="20dp"
+                    android:textColor="#000"/>
+                <LinearLayout
+                    android:id="@+id/colorimageslinearlayout"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+                    <!-- the yellow circle-->
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/yellow1"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/yellow1"
+                            android:visibility="gone"/>
+                        <ImageView
+                            android:id="@+id/yellow2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/yellow2"/>
+                    </FrameLayout>
+                    <!-- the blue circle-->
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/blue1"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/blue1"
+                            android:visibility="gone"/>
+                        <ImageView
+                            android:id="@+id/blue2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/blue2"/>
+                    </FrameLayout>
+                    <!-- the red circle-->
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/red1"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/red1"
+                            android:visibility="gone"/>
+                        <ImageView
+                            android:id="@+id/red2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/red2"/>
+                    </FrameLayout>
+                    <!-- the yellow circle-->
+                    <FrameLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/green1"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/green1"
+                            android:visibility="gone"/>
+                        <ImageView
+                            android:id="@+id/green2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/green2"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <!--  the end of Color linear layout  -->
+                <!--  the Start of Size linear layout  -->
+                <LinearLayout
+                    android:id="@+id/sizelinearlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/colorlinearlayout">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Size"
+                        android:textSize="20dp"
+                        android:textColor="#000"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/addbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="IncreaseSizeClicked"
+                            android:background="@drawable/ic_control_point_black_24dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/numberSize"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="#000"
+                            android:textSize="20dp"
+                            android:text="0"/>
+                        <ImageView
+                            android:id="@+id/sub"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="decreaseSizeClicked"
+                            android:background="@drawable/ic_remove_circle_outline_black_24dp"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!--  the end of Size linear layout  -->
+                <!--  the start of Add to Card  or WishList linear layout  -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sizelinearlayout">
+                    <Button
+                        android:layout_width="300dp"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="AddtoCardClicked"
+                        android:background="@drawable/buttonbg"
+                        android:text="Add to Card"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/addtowishlis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#880000"
+                            android:onClick="AddtoWishListClicked"
+                            android:text="Add to WishList"/>
+                        <View
+                            android:layout_below="@id/addtowishlis"
+                            android:layout_width="100dp"
+                            android:layout_height="4dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--  the end of Add to Card  or WishList linear layout  -->
+
+                <!--  the end of Main linear layout  -->
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
